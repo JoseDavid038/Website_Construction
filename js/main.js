@@ -30,3 +30,28 @@ const linkAction = () =>{
 
 navLink.forEach(n=> n.addEventListener('click', linkAction));
 
+
+// change background header
+// Add a class if the bottom offset is greater than 50 of the v
+const bgHeader = () =>{
+    const header = document.getElementById('header');
+    this.scrollY >=50 ? header.classList.add('bg-header')
+                      : header.classList.remove('bg-header');
+}
+
+window.addEventListener('scroll', bgHeader);
+bgHeader();
+
+
+// swiper services  
+const swiperServices = new Swiper('.services__swiper', {
+  loop: true,
+  grabCursor:true,
+  spaceBetween:24,
+  slidesPerview: 'auto',
+  
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
